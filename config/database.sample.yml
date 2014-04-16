@@ -3,8 +3,8 @@ development:
   encoding: utf8
   database: plentry_dev
   pool: 5
-  username: vagrant
-  password: vagrant
+  username: username
+  password: pass
   host: localhost
 
 test:
@@ -12,6 +12,6 @@ test:
   encoding: utf8
   database: plentry_test
   pool: 5
-  username: vagrant
-  password: vagrant
+  username: username
+  password: pass
   host: localhost
