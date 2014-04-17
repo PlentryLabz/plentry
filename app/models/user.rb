@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-  attr_accessible :name, :email, :password, :password_comfirmation
+  attr_accessible :name, :email, :password, :password_confirmation
 
   validates :password, presence: true,
                       on: :create,
@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
                     uniqueness: true,
                     email: true
   validates :name, presence: true
-  validate :check_authenticate, if: :email
+  # validate :check_authenticate, if: :email
 
   has_many :links
 
@@ -19,9 +19,9 @@ class User < ActiveRecord::Base
 
   private
 
-  def check_authenticate
-    if self.try(:authenticate, password)
-      errors.add(:password, :user_or_password_invalid)
-    end
-  end
+  # def check_authenticate
+  #   if self.try(:authenticate, password)
+  #     errors.add(:password, :user_or_password_invalid)
+  #   end
+  # end
 end

@@ -2,3 +2,6 @@ ru:
   activerecord:
     models:
     attributes:
+    errors:
+      messages:
+        record_invalid: "Ошибка создания новой записи"
