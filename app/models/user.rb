@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validate :check_authenticate, if: :email
 
+  has_many :links
+
   def to_s
     name
   end
